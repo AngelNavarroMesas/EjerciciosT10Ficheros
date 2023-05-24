@@ -10,7 +10,7 @@ public class Ejercicio6 {
         List<Integer> lista = new ArrayList();
         Scanner sc = null;
         try {
-            File fichero = new File(".\\src/ejercicio6/numeros.txt");
+            File fichero = new File(".\\src/ejercicio6/Numeros.txt");
             File fichSalida = new File(".\\src/ejercicio6/Ordenados.txt");
             FileReader fr = new FileReader(fichero);
             sc = new Scanner(fr);
@@ -25,7 +25,7 @@ public class Ejercicio6 {
                 fichSalida.createNewFile();
             for (int i = 0; i < lista.size(); i++) {
                 System.out.println(lista.get(i));
-                bw.write(lista.get(i));
+                bw.write(lista.get(i).toString());
                 bw.flush();
                 bw.newLine();
             }
